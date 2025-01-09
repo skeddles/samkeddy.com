@@ -50,6 +50,23 @@ function App() {
 			</Chunk>
 		</Block>
 
+		<Block title="Womens Work" color="#081b39">
+			<div className="description">
+				<p>
+					A single-page static site created with a custom node.js build process, deployed to Netlify. Features an gallery, bio, and contact form.
+				</p>
+			</div>
+
+			<Chunk title="Artist Bio">
+				<Image file="ww1.png" />
+			</Chunk>
+			<Chunk title="Contact Form">
+				<Image file="ww2.png" />
+			</Chunk>
+
+		</Block>
+
+
 	</>)
 }
 
