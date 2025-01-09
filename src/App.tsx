@@ -50,6 +50,28 @@ function App() {
 			</Chunk>
 		</Block>
 
+		<Block title="skedule" color="#282c34">
+			<div className="description">
+				<p>
+					A productivity app where users can create a daily schedule and it tracks their progress and current task. 
+					Created as a static site with React using Vite as a build tool and deployed to Netlify.
+					Also packaged as a desktop app for Windows using Electron.
+				</p>
+			</div>
+
+			<Chunk title="Task Progress">
+				<p>Progress is displayed as a single bar in a clean interface. </p>
+				<Image file="skedule.png" />
+			</Chunk>
+
+			<Chunk title="Task Progress">
+				<p>User can adjust settings in the sidebar to control their schedule and preferences</p>
+				<Image file="settings.png" />
+			</Chunk>
+
+		</Block>
+
+
 		<Block title="Womens Work" color="#081b39">
 			<div className="description">
 				<p>
