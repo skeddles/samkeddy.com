@@ -3,6 +3,6 @@ import '../css/Title.css';
 
 export default function Title () {
 	return (<Block className="Title">
-		<h1>Sam <span>Keddy</span></h1>
+		<h1><strong>S</strong>am <span><strong>K</strong>eddy</span></h1>
 	</Block>)
 }
