@@ -1,0 +1,20 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	min-height: 100%;
+	background: #aca4a4;
+}
+
+#root {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+	grid-auto-rows: 1fr;
+	grid-gap: 1rem;
+	width: 100%;
+	min-height: 100%;
+	padding: 1rem;
+	box-sizing: border-box;
+
+	--red: #aa2424;
+}
