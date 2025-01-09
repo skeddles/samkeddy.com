@@ -1,0 +1,10 @@
+.Chunk {
+	flex-basis: 600px;
+	margin: 2em;
+
+	p {
+		color: rgba(255, 255, 255, 0.6);
+		font-style: italic;
+		min-height: 3em;
+	}
+}
