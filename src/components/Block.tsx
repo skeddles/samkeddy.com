@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import '../css/Block.css';
-import Globe from '../assets/svg/globe.svg';
+import Globe from '../assets/svg/globe.svg?react';
 
 interface BlockProps {
 	children: ReactNode;
