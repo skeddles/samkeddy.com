@@ -9,12 +9,11 @@ function App() {
 
 	return (<>
 		<Title />
-		<Block title="Lospec" color="#1f1c23">
-			<div className="description">
-			<p>
-				Community art website for pixel artists to share their work and connect with other artists, as well as many other free web based tools.
-			</p>
-			</div>
+		<Block 
+			title="Lospec" 
+			color="#1f1c23"
+			description="Community art website for pixel artists to share their work and connect with other artists, as well as many other free web based tools."
+			>
 
 			<Chunk title="Art Display">
 				<p>Custom display for viewing user-submitted pixel art without typical browser distortion.</p>
@@ -50,14 +49,13 @@ function App() {
 			</Chunk>
 		</Block>
 
-		<Block title="skedule" color="#282c34">
-			<div className="description">
-				<p>
-					A productivity app where users can create a daily schedule and it tracks their progress and current task. 
+		<Block 
+			title="skedule" 
+			color="#282c34"
+			description="A productivity app where users can create a daily schedule and it tracks their progress and current task. 
 					Created as a static site with React using Vite as a build tool and deployed to Netlify.
-					Also packaged as a desktop app for Windows using Electron.
-				</p>
-			</div>
+					Also packaged as a desktop app for Windows using Electron."
+			>
 
 			<Chunk title="Task Progress">
 				<p>Progress is displayed as a single bar in a clean interface. </p>
@@ -72,12 +70,11 @@ function App() {
 		</Block>
 
 
-		<Block title="Womens Work" color="#081b39">
-			<div className="description">
-				<p>
-					A single-page static site created with a custom node.js build process, deployed to Netlify. Features an gallery, bio, and contact form.
-				</p>
-			</div>
+		<Block 
+			title="Womens Work" 
+			color="#081b39"
+			description="A single-page static site created with a custom node.js build process, deployed to Netlify. Features an gallery, bio, and contact form."
+			>
 
 			<Chunk title="Artist Bio">
 				<p>A simple single-page biography and gallery of images.</p>
@@ -90,12 +87,11 @@ function App() {
 
 		</Block>
 
-		<Block title="Shading Reference" color="#202632">
-			<div className="description">
-				<p>
-					A web-based tool for artists to study the shading of simple 3D shapes. The site is a static and hosted on Netlify, and uses Gulp to build.
-				</p>
-			</div>
+		<Block 
+			title="Shading Reference" 
+			color="#202632"
+			description="A web-based tool for artists to study the shading of simple 3D shapes. The site is a static and hosted on Netlify, and uses Gulp to build."
+			>
 
 			<Chunk title="Preset Selection">
 				<p>The homepage features an array of presets for useres to get started quickly. Puppeteer is used upon built to load each preset and render the thumbnail images.</p>
