@@ -80,15 +80,33 @@ function App() {
 			</div>
 
 			<Chunk title="Artist Bio">
+				<p>A simple single-page biography and gallery of images.</p>
 				<Image file="ww1.png" />
 			</Chunk>
 			<Chunk title="Contact Form">
+				<p>Contact form integrated with Netlify forms to deliver messages to the artist.</p>
 				<Image file="ww2.png" />
 			</Chunk>
 
 		</Block>
 
+		<Block title="Shading Reference" color="#202632">
+			<div className="description">
+				<p>
+					A web-based tool for artists to study the shading of simple 3D shapes. The site is a static and hosted on Netlify, and uses Gulp to build.
+				</p>
+			</div>
 
+			<Chunk title="Preset Selection">
+				<p>The homepage features an array of presets for useres to get started quickly. Puppeteer is used upon built to load each preset and render the thumbnail images.</p>
+				<Image file="shadingreference.png" />
+			</Chunk>
+
+			<Chunk title="Model Viewer">
+				<p>After clicking a preset it is loaded in the model viewer (Three.js), where the user can adjust all the settings.</p>
+				<Image file="shadingreference-viewer.png" />
+			</Chunk>
+		</Block>
 	</>)
 }
 
