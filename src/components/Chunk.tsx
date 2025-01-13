@@ -1,16 +1,18 @@
 
-import { ReactNode } from 'react';
+import Image from './Image';
 
 import '../css/Chunk.css';
 
 interface ChunkProps {
-	children: ReactNode;
 	title?: string;
+	description?: string;
+	image: string;
 }
 
-export default function Chunk({children, title}: ChunkProps) {
+export default function Chunk({title, description, image}: ChunkProps) {
 	return (<div className="Chunk">
 		<h2>{title}</h2>
-		{children}
+		<p>{description}</p>
+		<Image file={image}/>
 	</div>)
 }
