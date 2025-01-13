@@ -7,12 +7,15 @@ interface BlockProps {
 	title?: string;
 	color?: string;
 	description?: string;
+	link?: string;
 }
 
-export default function Block({children, className, title, color, description}: BlockProps) {
+export default function Block({children, className, title, color, description, link}: BlockProps) {
 	return (<div className={`Block ${className}`} style={{backgroundColor: color}}>
 		{title && <h1>{title}</h1>}
+		{link && <div className="link"><a href={"https://" + link} target="_blank">{link}</a></div>}
 		<div className={`content ${className}`}>
+
 			<div className="description"><p>{description}</p></div>
 			{children}
 		</div>
