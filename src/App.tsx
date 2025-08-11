@@ -13,6 +13,7 @@ function App() {
 			color="#1f1c23"
 			description="Community art website for pixel artists to share their work and connect with other artists, as well as many other free web based tools."
 			link="lospec.com"
+			technologies={['Node.js', 'Express', 'MongoDB', 'Sass', 'Handlebars', 'Gulp']}
 			>
 
 			<Chunk 
@@ -60,8 +61,9 @@ function App() {
 		<Block 
 			title="Dexelar"
 			color="#3a3a3a"
-			description="A web based trading card game deployed as a android app and PWA. Made with React and Node.js"
+			description="A web based trading card game deployed as a android app and PWA. Users open packs of cards each day which they can upgrade or trade."
 			link="dexelar.com"
+			technologies={['React', 'Typescript', 'Node.js', 'Express', 'MongoDB', 'Vite.js', 'Netlify']}
 			>
 
 			<Chunk 
@@ -98,6 +100,7 @@ function App() {
 					Created as a static site with React using Vite as a build tool and deployed to Netlify.
 					Also packaged as a desktop app for Windows using Electron."
 			link="skedule.day"
+			technologies={['React', 'Typescript', 'Electron']}
 			>
 
 			<Chunk 
@@ -120,6 +123,7 @@ function App() {
 			color="#081b39"
 			description="A single-page static site created with a custom node.js build process, deployed to Netlify. Features an gallery, bio, and contact form."
 			link="womenswork.janekeddy.com"
+			technologies={['HTML', 'CSS', 'Javascript', 'Netlify']}
 			>
 
 			<Chunk 
@@ -140,6 +144,7 @@ function App() {
 			color="#202632"
 			description="A web-based tool for artists to study the shading of simple 3D shapes. The site is a static and hosted on Netlify, and uses Gulp to build."
 			link="shadingreference.com"
+			technologies={['Three.js', 'HTML', 'CSS', 'Javascript', 'Netlify', 'Gulp']}
 			>
 
 			<Chunk 

@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import '../css/Block.css';
 import Globe from '../assets/svg/globe.svg?react';
+import Technologies from './Technologies';
 
 interface BlockProps {
 	children: ReactNode;
@@ -9,9 +10,10 @@ interface BlockProps {
 	color?: string;
 	description?: string;
 	link?: string;
+	technologies: string[];
 }
 
-export default function Block({children, className, title, color, description, link}: BlockProps) {
+export default function Block({children, className, title, color, description, link, technologies}: BlockProps) {
 	return (<div className={`Block ${className}`} style={{backgroundColor: color}}>
 		{title && <h1>{title}</h1>}
 		{link && <div className="link">
@@ -20,10 +22,20 @@ export default function Block({children, className, title, color, description, l
 				{link}
 			</a>
 		</div>}
-		<div className={`content ${className}`}>
 
+
+		<div className={`content ${className}`}>
 			<div className="description"><p>{description}</p></div>
+		</div>
+		<div className={`content ${className}`}>
+			{technologies && <Technologies technologies={technologies} />}
+		</div>
+		<div className={`content ${className}`}>
 			{children}
 		</div>
+
+		
+
+	
 	</div>)
 }
