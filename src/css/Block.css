@@ -17,7 +17,11 @@
 		margin-bottom: 0;
 	}
 
-		
+	* {
+		opacity: 1;
+		transition: opacity 500ms ease-out, filter 500ms ease-out, transform 500ms ease-out;
+	}
+
 	.link {
 		text-align: center;
 		a {
@@ -46,6 +50,10 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			filter: blur(0);
+			transition: opacity 500ms ease-out, filter 500ms ease-out, transform 500ms ease-out;
+
+
 
 			p {
 				opacity: 0.6;
@@ -53,5 +61,18 @@
 			}
 		}
 
+	}
+
+
+	&.unrevealed {
+		* {
+			opacity: 0;
+		}
+
+		.content .description {
+			filter: blur(10px);
+			transform: translateY(32px);
+			opacity: 0;
+		}
 	}
 }

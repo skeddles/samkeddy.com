@@ -1,5 +1,5 @@
-
 import Image from './Image';
+import useAnimation from '../hooks/useAnimation';
 
 import '../css/Chunk.css';
 
@@ -10,7 +10,9 @@ interface ChunkProps {
 }
 
 export default function Chunk({title, description, image}: ChunkProps) {
-	return (<div className="Chunk">
+	const ref = useAnimation<HTMLDivElement>();
+
+	return (<div ref={ref} className="Chunk">
 		<h2>{title}</h2>
 		<p>{description}</p>
 		<Image file={image}/>
