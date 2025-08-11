@@ -58,6 +58,40 @@ function App() {
 		</Block>
 
 		<Block 
+			title="Dexelar"
+			color="#3a3a3a"
+			description="A web based trading card game deployed as a android app and PWA. Made with React and Node.js"
+			link="dexelar.com"
+			>
+
+			<Chunk 
+				title="Card Collection"
+				description="Users can browse and sort their collection of thousands of cards"
+				image="dexelar-collection"
+				></Chunk>
+
+			<Chunk 
+				title="Card Merging"
+				description="Users can merge duplicate cards into rarer versions"
+				image="dexelar-merge"
+				></Chunk>
+
+			<Chunk 
+				title="Settings"
+				description="The settings page allows users to easily change settings on both local and account levels"
+				image="dexelar-settings"
+				></Chunk>
+
+			<Chunk 
+				title="Monetization"
+				description="Android users can make in-app-purchases through Google Play"
+				image="dexelar-purchase"
+				></Chunk>
+
+			
+		</Block>
+
+		<Block 
 			title="skedule" 
 			color="#282c34"
 			description="A productivity app where users can create a daily schedule and it tracks their progress and current task. 
