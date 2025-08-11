@@ -6,6 +6,8 @@
 	justify-content: center;
 	align-items: center;
 	background-color: white;
+	padding-bottom: 4em;
+	padding-top: 2em;
 
 	h1 {
 		font-family: 'Archivo Black', sans-serif;
@@ -17,6 +19,13 @@
 		span {color: var(--red);}
 		strong {font-size: 1.2em;}
 
-		margin-bottom: 1em;
+		margin-bottom: 0;
+	}
+
+	p {
+		text-align: center;
+		color: #8c8c8c;
+		font-weight: 600;
+		text-transform: capitalize;
 	}
 }

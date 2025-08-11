@@ -10,7 +10,7 @@ interface BlockProps {
 	color?: string;
 	description?: string;
 	link?: string;
-	technologies: string[];
+	technologies?: string[];
 }
 
 export default function Block({children, className, title, color, description, link, technologies}: BlockProps) {
