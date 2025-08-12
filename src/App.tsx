@@ -11,9 +11,9 @@ function App() {
 		<Block 
 			title="Lospec" 
 			color="#1f1c23"
-			description="Community art website for pixel artists to share their work and connect with other artists, as well as many other free web based tools."
+			description="Community art website for pixel artists to share their work and connect with other artists, as well as many other free web based tools. Supports 90k+ monthly active users."
 			link="lospec.com"
-			technologies={['Node.js', 'Express', 'MongoDB', 'Sass', 'Handlebars', 'Gulp']}
+			technologies={['Node.js', 'Express', 'MongoDB', 'Sass', 'Handlebars', 'Gulp', 'Ubuntu', 'Shopify']}
 			>
 
 			<Chunk 
@@ -61,9 +61,9 @@ function App() {
 		<Block 
 			title="Dexelar"
 			color="#3a3a3a"
-			description="A web based trading card game deployed as a android app and PWA. Users open packs of cards each day which they can upgrade or trade."
+			description="A web based trading card game deployed as an android app and PWA. Users open packs of cards each day which they can upgrade or trade."
 			link="dexelar.com"
-			technologies={['React', 'Typescript', 'Node.js', 'Express', 'MongoDB', 'Vite.js', 'Netlify']}
+			technologies={['React', 'Typescript', 'Node.js', 'Express', 'MongoDB', 'Vite.js', 'Netlify', 'Play API']}
 			>
 
 			<Chunk 
@@ -121,7 +121,7 @@ function App() {
 		<Block 
 			title="Womens Work" 
 			color="#081b39"
-			description="A single-page static site created with a custom node.js build process, deployed to Netlify. Features an gallery, bio, and contact form."
+			description="A single-page static site created with a custom node.js build process, deployed to Netlify. Features a gallery, bio, and contact form."
 			link="womenswork.janekeddy.com"
 			technologies={['HTML', 'CSS', 'Javascript', 'Netlify']}
 			>
