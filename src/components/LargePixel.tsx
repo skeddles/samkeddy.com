@@ -1,18 +1,18 @@
 import '../css/LargePixel.css';
 import useAnimation from '../hooks/useAnimation';
+import PixelImage from './PixelImage';
 
 interface LargePixelProps {
 	name: string;
 	description: string;
+	fullSizeFile?: string;
 }
 
-export default function LargePixel({name, description }: LargePixelProps) {
+export default function LargePixel({name, description, fullSizeFile }: LargePixelProps) {
 
 	const ref = useAnimation<HTMLDivElement>();
 
 	return (<div className="LargePixel" ref={ref}>
-		<div className="image" style={{ backgroundImage: `url(/pixel/${name}.png)` }} >
-			<p className="description">{description}</p>
-		</div>
+		<PixelImage file={name} description={description} fullSizeFile={fullSizeFile} />
 	</div>);
 }

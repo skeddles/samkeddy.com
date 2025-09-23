@@ -28,11 +28,8 @@ export default function Pixel({}: PixelProps) {
 			const target = event.target as HTMLElement;
 			console.log('Clicked:', target);
 			if (target.classList && target.classList.contains('image')) {
-				// Extract URL from backgroundImage style
-				const backgroundImage = target.style.backgroundImage;
-				const urlMatch = backgroundImage.match(/url\(["']?([^"']+)["']?\)/);
-				const imageUrl = urlMatch ? urlMatch[1] : undefined;
-				setPopupImage(imageUrl);
+				console.log('Image URL:', target.dataset.file);
+				setPopupImage(target.dataset.file);
 				setPopupVisible(true);
 			}
 
@@ -76,7 +73,7 @@ export default function Pixel({}: PixelProps) {
 
 
 		<PixelGallery>
-			<LargePixel name="farm" description="Tiles and sprites for a farming simulation game" />
+			<LargePixel name="farm" description="Tiles and sprites for a farming simulation game" fullSizeFile='farm-big'/>
 
 			<LargePixel name="character" description="8-Direction animated character base sprite" />
 
@@ -100,7 +97,7 @@ export default function Pixel({}: PixelProps) {
 				<PixelImage file="amadet" description="Running creature animation for an RPG" />
 				<PixelImage file="time" description="Tiles and sprites for a farming simulation game" />
 				<PixelImage file="rune" description="Characters for a tile based puzzle game" />
-				<PixelImage file="farm" description="Tiles and sprites for a farming simulation game" />
+				<PixelImage file="fishies" description="Fish sprites for an aquarium pet simulation game" />
 			</MediumPixel>
 
 			<LargePixel name="wizard" description="Map created for a game created with GB Studio" />
@@ -131,11 +128,11 @@ export default function Pixel({}: PixelProps) {
 			<MediumPixel>
 				<PixelImage file="beast" description="Personal Fantasy Creature Art" />
 				<PixelImage file="mountains" description="Personal Landscape Art" />
-				<PixelImage file="red-castle" description="Personal Fantasy Landscape Art" />
+				<PixelImage file="red-castle" description="Personal Fantasy Landscape Art" fullSizeFile="red-castle-big" />
 				<PixelImage file="hill" description="Personal Landscape Art" />
 			</MediumPixel>
 
-			<LargePixel name="church" description="Isometric dungeon map created for a tabletop RPG" />
+			<LargePixel name="church" description="Isometric dungeon map created for a tabletop RPG" fullSizeFile="church-big" />
 
 			<MediumPixel>
 				<PixelImage file="bird" description="Personal Fantasy Character Art" />
@@ -154,13 +151,13 @@ export default function Pixel({}: PixelProps) {
 			<MediumPixel>
 				<PixelImage file="distant" description="Personal Fantasy Landscape Art" />
 				<PixelImage file="horxolotl" description="Personal Fantasy Character Art" />
-				<PixelImage file="cliffs" description="Personal Landscape Art" />
+				<PixelImage file="cliffs" description="Personal Landscape Art" fullSizeFile="cliffs-big" />
 				<PixelImage file="standbyme" description="Personal Landscape Art" />
 			</MediumPixel>
 
 			<MediumPixel>
 				<PixelImage file="silvercity" description="Personal Architecture Art" />
-				<PixelImage file="rhacos" description="Personal Fantasy Character Art" />
+				<PixelImage file="rhacos" description="Personal Fantasy Character Art" fullSizeFile="rhacos-big" />
 				<PixelImage file="rhino" description="Personal Landscape Art" />
 				<PixelImage file="city" description="Personal Fantasy Architecture Art" />
 			</MediumPixel>
