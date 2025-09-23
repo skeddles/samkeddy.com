@@ -1,3 +1,4 @@
+import { useState, useEffect, useRef } from 'react';
 import '../css/Pixel.css';
 import PixelGallery from './PixelGallery';
 import LargePixel from './LargePixel';
@@ -6,17 +7,41 @@ import PixelImage from './PixelImage';
 import Logo from './Logo';
 import _TinyPixel from './TinyPixel';
 import SmallPixel from './SmallPixel';
+import PixelResume from './PixelResume';
 
 interface PixelProps {
 
 }
 
 export default function Pixel({}: PixelProps) {
+
+	const [resumeVisible, setResumeVisible] = useState(false);
+    const resumeRef = useRef<HTMLDivElement>(null);
+
+	useEffect(() => {
+		const handleClickOutside = (event: MouseEvent) => {
+			if (!resumeRef.current) return;
+			if (resumeVisible && !resumeRef.current.contains(event.target as Node)) {
+				setResumeVisible(false);
+			}
+		};
+		document.addEventListener('mousedown', handleClickOutside);
+		return () => {
+			document.removeEventListener('mousedown', handleClickOutside);
+		};
+	}, [resumeVisible]);
+
 	return (<div className="Pixel">
+
+
 		<div className="heading">
 			<Logo />
 			<h2>Pixel Art Portfolio</h2>
 		</div>
+
+		<div className="resume-link" onClick={(e) => { e.stopPropagation(); setResumeVisible(!resumeVisible); }}>View Resume</div>
+
+
 
 		<PixelGallery>
 			<LargePixel name="farm" description="Tiles and sprites for a farming simulation game" />
@@ -40,8 +65,8 @@ export default function Pixel({}: PixelProps) {
 
 
 			<MediumPixel>
-				<PixelImage file="farm" description="Tiles and sprites for a farming simulation game" />
-				<PixelImage file="farm" description="Tiles and sprites for a farming simulation game" />
+				<PixelImage file="amadet" description="Running creature animation for an RPG" />
+				<PixelImage file="time" description="Tiles and sprites for a farming simulation game" />
 				<PixelImage file="rune" description="Characters for a tile based puzzle game" />
 				<PixelImage file="farm" description="Tiles and sprites for a farming simulation game" />
 			</MediumPixel>
@@ -69,7 +94,7 @@ export default function Pixel({}: PixelProps) {
 				<PixelImage file="egyptian-ammit" description="Small Game Boy Color style tileset with a custom palette" />
 			</TinyPixel> */}
 
-			<LargePixel name="church" description="Isometric dungeon map created for a tabletop RPG" />
+
 
 			<MediumPixel>
 				<PixelImage file="beast" description="Personal Fantasy Creature Art" />
@@ -78,16 +103,44 @@ export default function Pixel({}: PixelProps) {
 				<PixelImage file="hill" description="Personal Landscape Art" />
 			</MediumPixel>
 
+			<LargePixel name="church" description="Isometric dungeon map created for a tabletop RPG" />
+
+			<MediumPixel>
+				<PixelImage file="bird" description="Personal Fantasy Character Art" />
+				<PixelImage file="jaxel" description="Personal Fantasy Character Art" />
+				<PixelImage file="alice" description="Personal Fantasy Character Art" />
+				<PixelImage file="mae" description="Personal Fantasy Character Art" />
+			</MediumPixel>
+
 			<MediumPixel>
 				<PixelImage file="jeer" description="Personal Character Art" />
 				<PixelImage file="alien" description="Personal Fantasy Character Art" />
-				<PixelImage file="red-castle" description="Personal Fantasy Landscape Art" />
-				<PixelImage file="hill" description="Personal Landscape Art" />
+				<PixelImage file="homebound" description="Personal Fantasy Landscape Art" />
+				<PixelImage file="treecat" description="Personal Fantasy Creature Art" />
 			</MediumPixel>
+
+			<MediumPixel>
+				<PixelImage file="distant" description="Personal Fantasy Landscape Art" />
+				<PixelImage file="horxolotl" description="Personal Fantasy Character Art" />
+				<PixelImage file="cliffs" description="Personal Landscape Art" />
+				<PixelImage file="standbyme" description="Personal Landscape Art" />
+			</MediumPixel>
+
+			<MediumPixel>
+				<PixelImage file="silvercity" description="Personal Architecture Art" />
+				<PixelImage file="rhacos" description="Personal Fantasy Character Art" />
+				<PixelImage file="rhino" description="Personal Landscape Art" />
+				<PixelImage file="city" description="Personal Fantasy Architecture Art" />
+			</MediumPixel>
+
 
 		</PixelGallery>
 
 		<div className="top-fade" />
 		<div className="bottom-fade" />
+
+	<PixelResume visible={resumeVisible} resumeRef={resumeRef}/>
+
 	</div>);
 }
+

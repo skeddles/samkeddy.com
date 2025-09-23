@@ -4,7 +4,7 @@
     justify-content: center;
 	
 	gap: 1em;
-	padding: 1em;
+	margin: 2em 0;
 
 	&:has(.image:hover) {
 		.image {
@@ -20,7 +20,7 @@
 	.image {
 		position: relative;
 		border-radius: 1em;
-		box-shadow: 0.5em 0.5em 16px #3934341d;
+		box-shadow: 0.5em 0.5em 16px rgba(57, 52, 52, 0.176);
 		overflow: hidden;
 		background-color: #8f8787;
 		width: 100%;
