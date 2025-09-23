@@ -1,0 +1,13 @@
+.Logo {
+	font-family: 'Archivo Black', sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+	color: #1e1e1e;
+
+	span {color: var(--red);}
+	strong {font-size: 1.2em;}
+
+	margin-bottom: 0;
+
+	user-select: none;
+}

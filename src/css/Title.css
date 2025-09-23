@@ -9,17 +9,9 @@
 	padding-bottom: 4em;
 	padding-top: 2em;
 
-	h1 {
-		font-family: 'Archivo Black', sans-serif;
+	.Logo {
 		font-size: 4em;
-		text-transform: uppercase;
-		text-align: center;
-		color: #1e1e1e;
-
-		span {color: var(--red);}
-		strong {font-size: 1.2em;}
-
-		margin-bottom: 0;
+		margin: 0.7em 0 0em 0;
 	}
 
 	p {

@@ -1,9 +1,10 @@
 
 import '../css/Title.css';
+import Logo from './Logo';
 
 export default function Title () {
 	return (<div className="Title"><>
-		<h1><strong>S</strong>am <span><strong>K</strong>eddy</span></h1>
+		<Logo />
 		<p>
 			Full Stack Web Developer & Designer
 		</p>

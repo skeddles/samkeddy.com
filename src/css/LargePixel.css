@@ -1,0 +1,7 @@
+.LargePixel {
+	width: 512px;
+	height: 512px;
+	transition: opacity 500ms ease-out;
+
+
+}
