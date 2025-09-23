@@ -1,4 +1,39 @@
 [[redirects]]
-	from = "/pixel"
-	to = "/index.html"
-	status = 200
+  from = "/fonts"
+  to = "https://www.dafont.com/skeddles.d3111"
+  status = 301
+
+[[redirects]]
+  from = "/pixel-art-outlines"
+  to = "https://lospec.com/articles/pixel-art-outlines/"
+  status = 301
+
+[[redirects]]
+  from = "/pixel-art-outlines-part-2-using-color"
+  to = "https://lospec.com/articles/pixel-art-outlines-part-2-using-color/"
+  status = 301
+
+[[redirects]]
+  from = "/forest-name-generator"
+  to = "https://skeddles.com/forest-name-generator"
+  status = 301
+
+[[redirects]]
+  from = "/tavern-name-generator"
+  to = "https://skeddles.com/tavern-name-generator"
+  status = 301
+
+[[redirects]]
+  from = "/contact"
+  to = "https://skeddles.com"
+  status = 301
+
+[[redirects]]
+  from = "/pixel"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
