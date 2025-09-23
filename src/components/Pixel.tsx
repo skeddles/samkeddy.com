@@ -8,6 +8,7 @@ import Logo from './Logo';
 import _TinyPixel from './TinyPixel';
 import SmallPixel from './SmallPixel';
 import PixelResume from './PixelResume';
+import Popup from './Popup';
 
 interface PixelProps {
 
@@ -17,6 +18,38 @@ export default function Pixel({}: PixelProps) {
 
 	const [resumeVisible, setResumeVisible] = useState(false);
     const resumeRef = useRef<HTMLDivElement>(null);
+
+	const [popupImage, setPopupImage] = useState<string | undefined>(undefined);
+	const [popupVisible, setPopupVisible] = useState(false);
+	const pixelRef = useRef<HTMLDivElement>(null);
+
+	useEffect(() => {
+		const handleImageClick = (event: MouseEvent) => {
+			const target = event.target as HTMLElement;
+			console.log('Clicked:', target);
+			if (target.classList && target.classList.contains('image')) {
+				// Extract URL from backgroundImage style
+				const backgroundImage = target.style.backgroundImage;
+				const urlMatch = backgroundImage.match(/url\(["']?([^"']+)["']?\)/);
+				const imageUrl = urlMatch ? urlMatch[1] : undefined;
+				setPopupImage(imageUrl);
+				setPopupVisible(true);
+			}
+
+			else if (target.classList.contains('Popup') || target.classList.contains('popup-image')) {
+				setPopupVisible(false);
+			}
+		};
+		const refCurrent = pixelRef.current;
+		if (refCurrent) {
+			refCurrent.addEventListener('click', handleImageClick);
+		}
+		return () => {
+			if (refCurrent) {
+				refCurrent.removeEventListener('click', handleImageClick);
+			}
+		};
+	}, [popupImage]);
 
 	useEffect(() => {
 		const handleClickOutside = (event: MouseEvent) => {
@@ -31,7 +64,7 @@ export default function Pixel({}: PixelProps) {
 		};
 	}, [resumeVisible]);
 
-	return (<div className="Pixel">
+	return (<div className="Pixel" ref={pixelRef}>
 
 
 		<div className="heading">
@@ -40,7 +73,6 @@ export default function Pixel({}: PixelProps) {
 		</div>
 
 		<div className="resume-link" onClick={(e) => { e.stopPropagation(); setResumeVisible(!resumeVisible); }}>View Resume</div>
-
 
 
 		<PixelGallery>
@@ -139,7 +171,9 @@ export default function Pixel({}: PixelProps) {
 		<div className="top-fade" />
 		<div className="bottom-fade" />
 
-	<PixelResume visible={resumeVisible} resumeRef={resumeRef}/>
+		<PixelResume visible={resumeVisible} resumeRef={resumeRef}/>
+
+		<Popup image={popupImage} visible={popupVisible} />
 
 	</div>);
 }
