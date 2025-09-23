@@ -4,7 +4,7 @@ import LargePixel from './LargePixel';
 import MediumPixel from './MediumPixel';
 import PixelImage from './PixelImage';
 import Logo from './Logo';
-import TinyPixel from './TinyPixel';
+import _TinyPixel from './TinyPixel';
 import SmallPixel from './SmallPixel';
 
 interface PixelProps {
@@ -24,15 +24,15 @@ export default function Pixel({}: PixelProps) {
 			<LargePixel name="character" description="8-Direction animated character base sprite" />
 
 			<SmallPixel>
-				<PixelImage file="egyptian-gryphon" description="Small" />
-				<PixelImage file="ghost" description="Small" />
-				<PixelImage file="medieval-cockatrice" description="Small" />
-				<PixelImage file="greek-minotaur" description="Small" />
-				<PixelImage file="greek-medusa" description="Small" />
-				<PixelImage file="norse-nidhogg" description="Small" />
-				<PixelImage file="greek-phoenix" description="Small" />
-				<PixelImage file="egyptian-sphinx" description="Small" />
-				<PixelImage file="egyptian-ammit" description="Small" />
+				<PixelImage file="egyptian-gryphon" description="Egyptian Gryphon" />
+				<PixelImage file="ghost" description="Ghost" />
+				<PixelImage file="medieval-cockatrice" description="Medieval Cockatrice" />
+				<PixelImage file="greek-minotaur" description="Greek Minotaur" />
+				<PixelImage file="greek-medusa" description="Greek Medusa" />
+				<PixelImage file="norse-nidhogg" description="Norse Nidhogg" />
+				<PixelImage file="greek-phoenix" description="Greek Phoenix" />
+				<PixelImage file="egyptian-sphinx" description="Egyptian Sphinx" />
+				<PixelImage file="egyptian-ammit" description="Egyptian Ammit" />
 			</SmallPixel>
 
 
