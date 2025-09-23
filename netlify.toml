@@ -1,0 +1,4 @@
+[[redirects]]
+	from = "/pixel"
+	to = "/index.html"
+	status = 200
